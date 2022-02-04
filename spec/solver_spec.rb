@@ -1,15 +1,6 @@
 require '../solver'
 
 describe Solver do
-    word = 'Solver'
-    word_two = 'Hamid'
-
-    num = 20
-    num_two = 30
-    num_three = 9
-    num_four = -342
-    num_five = 0
-    num_six = 448
 
     solve = Solver.new
 
@@ -43,5 +34,17 @@ describe Solver do
           result = solve.fizzbuzz(448)
           expect(result).to eql 448
         end
+      end
+
+      context 'Test the reverse method in Solver Class' do
+        it 'should return the reverse of the word' do
+          reversed = solve.reverse('hamid')
+          expect(reversed).to eq('dimah')
+        end
+        it 'should return the reverse of the word' do
+          reversed = solve.reverse('simo')
+          expect(reversed).to eq('omis')
+        end
+      end
       end
 end
