@@ -36,7 +36,7 @@ describe Solver do
         end
       end
 
-      context 'Test the reverse method in Solver Class' do
+      context 'Test the reverse method in solver.rb file' do
         it 'should return the reverse of the word' do
           reversed = solve.reverse('hamid')
           expect(reversed).to eq('dimah')
@@ -46,5 +46,18 @@ describe Solver do
           expect(reversed).to eq('omis')
         end
       end
+            
+      context 'Test the factorial method in solver.rb file' do
+        it 'should return the factorial of a given positive number' do
+          factorial = solve.factorial(9)
+          expect(factorial).to eq(3)
+        end
+        it 'should return an error if the number is less than 0' do
+          expect { solve.factorial(num_two) }.to raise_error('number is less than 0')
+        end
+        it 'should return 1 when the given number is 0' do
+          factorial_zero = solve.factorial(0)
+          expect(factorial_zero).to eq(1)
+        end
       end
 end
