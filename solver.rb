@@ -8,7 +8,7 @@ class Solver
     end
 
     def reverse(word)
-        # Write your code here
+        word.reverse
     end
 
     def fizzbuzz(n)
