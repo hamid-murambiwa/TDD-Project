@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '../solver'
+require_relative '../solver'
 
 describe Solver do
   solve = Solver.new
@@ -26,9 +26,9 @@ describe Solver do
       expect(result).to eql 'fizz'
     end
 
-    it 'should return 0 if 0 is passed' do
-      result = solve.fizzbuzz(0)
-      expect(result).to eql 0
+    it 'should return 448 if 448 is passed' do
+      result = solve.fizzbuzz(448)
+      expect(result).to eql 448
     end
   end
 end

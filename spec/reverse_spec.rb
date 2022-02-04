@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '../solver'
+require_relative '../solver'
 
 describe Solver do
   solve = Solver.new
